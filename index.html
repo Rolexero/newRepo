@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Es6 features</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-success">ES6 features</h1>
+    </div>
+
+
+    <script>
+        console.log(+"hello");
+        var hasContent = 'fhfhjfddd';
+        console.log(Boolean(hasContent));
+        let newVal = null;
+        console.log(newVal);
+
+        // Object
+        // collection of name value pair
+        function DonutConstructor(type, name, value) {
+            this.type = type;
+            this.name = name;
+            this.value = value;
+            this.method = ()=>{
+                console.log(`This name is ${this.name}`);
+            }
+        };
+
+        let newDonut = new DonutConstructor('crumb', 'ola', 23);
+        let freshDou = new DonutConstructor('okay', 'mike', 40);
+
+        let constArray = [newDonut, freshDou];
+        // console.log(constArray[1].method());
+        // constArray.pop();
+        console.log(constArray.pop());
+
+        // console.log(newDonut.type);
+
+        // Array collection of data
+        let myNamesArray = ['micheal', 'joy', 'micheal'];
+        // console.log(myNamesArray.join(','));
+
+        function incrementCount() {
+            let count = 1;
+            count ++;
+            console.log(count);
+        }
+        incrementCount();
+        incrementCount();
+        incrementCount();
+
+
+        const myObject = {name: 'emmabong', age: 30};
+        const newFunc = function(myObj){
+            return myObj.age = 50;
+        }
+
+        console.log(myObject);
+        
+    </script>
+</body>
+</html>
